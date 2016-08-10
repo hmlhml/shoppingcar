@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/shopping.css">
+	<script src="js/angular.js"></script>
+	<script src="js/shopping.js"></script>
+</head>
+<body>
+	<div class="out" ng-controller="shop">
+		<div class="search">
+			<input type="text" ng-model="value" placeholder="搜索商品">
+		</div>
+		<div class="shopping">
+			<div class="goods" ng-repeat="v in goods|filter:value">
+				<a href="javascript:;">
+					<div class="img">
+						<img src="{{v.src}}" alt="">
+						
+					</div>
+					<div class="xinxi">
+						<div class="name">{{v.name}}</div>
+						<div class="price">{{v.price|currency:"￥"}}</div>
+					</div>
+				</a>
+				<div class="buy" ng-click="buyBtn($index)">购买</div>
+			</div>
+			
+		</div>
+		<table class="car">
+			<tr>
+				<th class="t1">商品</th>
+				<th class="t2" ng-click="order('price')">单价</th>
+				<th class="t3" ng-click="order('num')">数量</th>
+				<th class="t4" ng-click="order('jiage')">价格</th>
+				<td class="t5"></td>
+			</tr>
+			<tr ng-repeat="v in buy|orderBy:k:or">
+				<td class="t1"><img src="{{v.src}}" alt="">{{v.name}}</td>
+				<td class="t2">{{v.price|currency:"￥"}}</td>
+				<td class="t3"><button ng-click="add(v.name)">+</button><input type="text" ng-model="v.num"><button ng-click="jian($index)">-</button></td>
+				<td class="t4">{{v.jiage|currency:"￥"}}</td>
+				<td class="t5"><button ng-click="del(v.name)">删除</button></td>
+			</tr>
+			<tr>
+				<td>总价</td>
+				<td colspan="5" class="zong">{{sum()|currency:"￥"}}</td>
+			</tr>
+		</table>
+	
+	</div>
+</body>
+</html>

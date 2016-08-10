@@ -1,0 +1,155 @@
+html{
+		height: 100%;
+	}
+	body{
+		margin: 0;
+		height: 100%;
+	}
+	*{
+		box-sizing:border-box;
+	}
+	.out{
+		width: 1000px;
+		height: auto;
+		margin: 0 auto;
+		
+		
+	}
+	.search input{
+		margin-bottom: 15px;
+		margin-top: 15px;
+		width: 300px;
+		height: 50px;
+		text-indent: 2em;
+		outline: 0;
+	}
+	.shopping,.car{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	.goods{
+		width: 20%;
+		height: 280px;
+		float: left;
+		margin-right:6.6%;
+		margin-bottom: 40px;
+		border: 1px solid #ccc;
+		background:#fff;
+	}
+	.goods:nth-of-type(4n){
+		margin-right: 0;
+	}
+	.goods:hover{
+		border: 2px solid orange;
+	}
+	.goods a{
+		display: block;
+		width: 100%;
+		height:240px;
+		color: #666;
+	}
+	.goods .img{
+		width: 100%;
+		height: 200px;
+		text-align: center;
+		line-height: 280px;
+	}
+	.goods img{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	.goods .xinxi{
+		width: 100%;
+		line-height: 40px;
+		height: 40px;
+		font-weight: bold;
+	}
+	.goods .name{
+		float: left;
+		height: 100%;
+		padding-left: 20px;
+		color: #333;
+	}
+	.goods .price{
+		float: right;
+		height: 100%;
+		padding-right: 20px;
+		color: #F01A1A;
+
+	}
+	.goods .buy{
+		width: 100px;
+		height: 30px;
+		margin: 0 auto 10px;
+		border-radius: 3px;
+		border: 1px solid orange;
+		text-align: center;
+		line-height: 30px;
+		cursor: pointer;
+		background: orange;
+		color:#fff;
+
+	}
+	.goods .buy:active{
+		
+		background: rgba(255,165,0,0.7);
+	}
+	.car{
+		border: 1px solid #cacaca;
+		border-bottom: 0;
+		border-collapse: collapse;
+		background:#fff;
+	}
+	.car tr{
+		width: 100%;
+		height: 100px;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+	}
+	.car tr:first-child,.car tr:last-child{
+		height: 40px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	tr input{
+		outline: 0;
+		width: 100px;
+		text-align: center;
+		border:1px solid #acacac;
+		border-left:none;
+		border-right:none;
+	}
+	tr button{
+		border:1px solid #acacac;
+	}
+	.t1{
+		width: 30%;
+	}
+	.t1 img{
+		vertical-align: middle;
+		border: 0;
+		width:80px;
+		height: 80px;
+		margin:0 10px;
+		transform:translateX(-30px);
+	}
+	.t2{
+		width: 15%;
+	}
+	.t3{
+		width: 25%;
+	}
+	.t4{
+		width: 15%;
+	}
+	td.t4,.zong{
+		color: #F01A1A;
+		font-weight: bold;
+	}
+	.t5{
+		width:15%;
+		border-right: 1px solid #cacaca;
+	}
